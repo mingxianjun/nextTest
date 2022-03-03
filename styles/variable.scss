@@ -1,0 +1,22 @@
+//默认主题
+:root {
+  --color-body-bg: #efefef;
+  //主色
+  --color-primary: #ffa940;
+  --color-primary-hover: #d9852b;
+  --color-primary-active: #d9852b;
+  --color-primary-outline: rgba(255, 169, 64, 0.2);
+  //文字颜色
+  --color-text: rgba(0, 0, 0, .8);
+  --color-text-secondary: rgba(0, 0, 0, .6);
+  --color-text-disable: rgba(0, 0, 0, .3);
+}
+
+//深色主题
+.theme-dark {
+  --color-body-bg: #1b1c21;
+  //文字颜色
+  --color-text: rgba(255, 255, 255, .8);
+  --color-text-secondary: rgba(255, 255, 255, .6);
+  --color-text-disable: rgba(255, 255, 255, .3);
+}

@@ -1,26 +1,28 @@
-import { useState } from "react";
+import React, {useState} from "react";
+import Head from 'next/head'
+import styles from '../styles/Login.module.scss';
+import {Button} from "../components";
 
-function Login({user}:any) {
-    const [theme,setTheme] = useState('');
-    const handlerSetTheme = ()=>{
-        console.log(theme)
-        setTheme('theme-dark')
-    }
-    return <div className={theme}>
-        登录页面{user.name}
-        <button onClick={handlerSetTheme}>设置主题</button>
+function Login() {
+
+  const [name, setName] = useState('');
+
+  const handleClick = () => {
+    setName('yes')
+    console.log(name)
+  }
+
+  return (
+    <div className={styles.wrap}>
+      <Head>
+        <title>登录页面{name}</title>
+        <meta name="description" content="Learn forms with Next.js" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      登录页面
+      <Button type={'primary'} htmlType={'submit'} onClick={handleClick}>登录</Button>
     </div>
-}
-
-export async function getStaticProps() {
-    const res = await fetch(process.env.API_BASE_URL+'api/hello');
-    const user = await res.json()
-    console.log(process.env.API_BASE_URL)
-    return {
-        props: {
-            user,
-        }
-    }
+  )
 }
 
 export default Login;
