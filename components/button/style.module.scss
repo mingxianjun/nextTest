@@ -1,0 +1,33 @@
+.ui {
+  padding: .4em 2em;
+  border: none;
+  outline: none;
+  word-spacing: 2px;
+  border-radius: var(--size-border-radius);
+  cursor: pointer;
+  text-align: center;
+
+  &.loading {
+    pointer-events: none;
+    opacity: .5;
+  }
+
+  &.default {
+  }
+
+  &.primary {
+    background: var(--color-primary);
+  }
+
+  &.small {
+    font-size: 1.2rem;
+  }
+
+  &.middle {
+    font-size: 1.5rem;
+  }
+
+  &.large {
+    font-size: 2rem;
+  }
+}

@@ -1,6 +1,40 @@
 .wrap {
-  margin: 0 auto;
-  width: 50vw;
+  h1 {
+    font-size: 24px;
+  }
+
+  display: flex;
+  margin: 25vh auto;
+  width: 400px;
   height: 50vh;
-  border: 1px solid #ddd;
+  flex-flow: column;
+  align-items: center;
+  background: var(--color-panel);
+  border-radius: var(--size-border-radius);
+
+  .formItem {
+    display: flex;
+    width: 400px;
+    padding: 1rem 4rem;
+
+    input {
+      width: 100%;
+      padding: .8rem 1rem;
+      border: 1px solid var(--color-input-border);
+      border-radius: var(--size-border-radius);
+      outline: none;
+
+      &:focus {
+        border: 1px solid var(--color-primary);
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+
+    &.between {
+      justify-content: space-between;
+    }
+  }
 }

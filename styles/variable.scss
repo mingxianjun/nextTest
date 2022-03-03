@@ -1,4 +1,8 @@
-//默认主题
+:root {
+  --size-border-radius: 4px;
+}
+
+//主题颜色
 :root {
   --color-body-bg: #efefef;
   //主色
@@ -10,6 +14,12 @@
   --color-text: rgba(0, 0, 0, .8);
   --color-text-secondary: rgba(0, 0, 0, .6);
   --color-text-disable: rgba(0, 0, 0, .3);
+  //面板
+  --color-panel: #fff;
+  //表单
+  --color-input-border: #ddd;
+  //链接
+  --color-link: var(--color-primary);
 }
 
 //深色主题
